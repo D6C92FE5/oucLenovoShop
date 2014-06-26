@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.master" AutoEventWireup="true" CodeFile="ItemEdit.aspx.cs" Inherits="ItemEdit" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.master" AutoEventWireup="true" CodeFile="ItemEdit.aspx.cs" Inherits="ItemEdit" ValidateRequest="false" %>
 
 <asp:Content ID="ctMain" ContentPlaceHolderID="ctMainContentPlaceHolder" Runat="Server">
   <div class="row">
@@ -28,7 +28,7 @@
           <div class="form-group">
             <label for="processor">处理器</label>
             <input type="text" class="form-control" id="processor" name="processor" required
-                placeholder="请输入处理器型号", value="<%= item.Processor %>">
+                placeholder="请输入处理器型号" value="<%= item.Processor %>">
           </div>
           <div class="form-group">
             <label for="list-picture">列表图片</label>
@@ -37,6 +37,12 @@
           <div class="form-group">
             <label for="detail-picture">展示图片</label>
             <input type="file" id="detail-picture" name="detail-picture" multiple>
+          </div>
+          <div>
+            <label for="detail-picture">详细介绍</label>
+            <textarea class="wysiwyg form-control" rows="10" name="intro">
+              <%= item.Intro %>
+            </textarea>
           </div>
           <button type="submit" class="btn btn-primary">提交</button>
         </form>

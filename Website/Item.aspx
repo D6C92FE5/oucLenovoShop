@@ -41,6 +41,7 @@
       </div>
     </div>
   </div>
-  <div class="detail">
+  <div class="detail intro">
+    <%= item.Intro %>
   </div>
 </asp:Content>

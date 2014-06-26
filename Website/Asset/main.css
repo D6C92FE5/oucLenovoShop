@@ -158,6 +158,10 @@ form .row button {
     padding-right: 20px;
 }
 
+.detail.intro img {
+    width: 100%!important;
+}
+
 
 .auth {
     max-width: 330px;
@@ -220,4 +224,16 @@ form .row button {
 
 .user span {
     font-weight: bold;
+}
+
+
+.wysiwyg + * {
+    margin-bottom: 20px;
+}
+.note-editor {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.note-toolbar.btn-toolbar {
+    border-radius: 4px;
 }

@@ -37,7 +37,7 @@ public partial class ItemEdit : BasePage
             item.Model = Request["modal"];
             item.ScreenSize = Request["screen-size"];
             item.Processor = Request["processor"];
-            item.Intro = "";
+            item.Intro = Request["intro"];
 
             if (item.ID == 0)
             {
