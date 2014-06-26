@@ -7,6 +7,10 @@ body,h1,h2,h3,h5,h6,.h1,.h2,.h3,.h5,.h6 {
     font-family: "Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Microsoft YaHei",sans-serif;
 }
 
+body {
+    min-width: 480px;
+}
+
 .pure-g {
     font-size: 0;
 }
@@ -146,4 +150,36 @@ form .row button {
 .detail .operate a {
     padding-left: 20px;
     padding-right: 20px;
+}
+
+
+.auth {
+  max-width: 330px;
+  padding: 10px 20px 20px;
+  margin: 40px auto;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.auth .error {
+  padding-left: 10px;
+  font-size: .5em;
+  vertical-align: middle;
+  color: #a94442;
+}
+
+.auth .form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.auth .alter {
+  float: right;
+  margin: 23px 5px 0 0;
 }
