@@ -1,0 +1,77 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Main.master.cs" Inherits="Main" %>
+
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <title>联想商城</title>
+  <link rel="stylesheet" href="/Component/bootstrap-united/bootstrap.min.css">
+  <link rel="stylesheet" href="/Component/pure/grids-responsive-min.css">
+  <link rel="stylesheet" href="/Component/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/Component/bootstrap-switch/css/bootstrap3/bootstrap-switch.min.css">
+  <link rel="stylesheet" href="/Component/summernote/summernote.css">
+  <link rel="stylesheet" href="/Component/summernote/summernote-bs3.css">
+  <link rel="stylesheet" href="/Asset/main.css">
+</head>
+<body>
+  <div class="container">
+
+    <h1>联想网上商城</h1>
+
+    <div class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="/" class="navbar-brand">Lenovo</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/Index.aspx"><i class="fa fa-fw fa-home"></i>首页</a></li>
+            <li><a href="/Test.aspx"><i class="fa fa-fw fa-info"></i>关于</a></li>
+            <li><a href="/ItemEdit.aspx"><i class="fa fa-fw fa-info"></i>添加电脑</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <asp:PlaceHolder ID="ctCurrentUser" runat="server">
+              <li class="dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                  <i class="fa fa-fw fa-user"></i>
+                  <span><asp:Literal ID="ctUsername" runat="server"></asp:Literal></span>
+                  <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="/logout"><i class="fa fa-fw fa-sign-out"></i>注销</a></li>
+                  <li class="hide"><a href="/change-password">修改密码</a></li>
+                </ul>
+              </li>
+            </asp:PlaceHolder>
+            <asp:PlaceHolder ID="ctAuth" runat="server">
+              <li><a href="/Signup.aspx"><i class="fa fa-fw fa-user"></i>注册</a></li>
+              <li><a href="/Login.aspx"><i class="fa fa-fw fa-sign-in"></i>登录</a></li>
+            </asp:PlaceHolder>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <asp:ContentPlaceHolder id="ctMainContentPlaceHolder" runat="server"></asp:ContentPlaceHolder>
+
+  </div>
+  <script src="/Component/jquery/jquery-min.js"></script>
+  <script src="/Component/underscore.js/underscore-min.js"></script>
+  <script src="/Component/handlebars.js/handlebars.js"></script>
+  <script src="/Component/bootstrap/js/bootstrap.js"></script>
+  <script src="/Component/bootstrap-switch/js/bootstrap-switch.js"></script>
+  <script src="/Component/moment.js/moment-with-langs.min.js"></script>
+  <script src="/Component/summernote/summernote.min.js"></script>
+  <script src="/Component/summernote/lang/summernote-zh-CN.js"></script>
+  <script src="/Asset/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+
+.hide {
+    display: none;
+}
+
+body,h1,h2,h3,h5,h6,.h1,.h2,.h3,.h5,.h6 {
+    font-family: "Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Microsoft YaHei",sans-serif;
+}
+
+.pure-g {
+    font-size: 0;
+}
+
+.navbar {
+    background-color: #ba0a0c;
+    border-color: #de291c;
+}
+.navbar > .container .navbar-brand,
+.navbar > .container-fluid .navbar-brand,
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-toggle:hover, 
+.navbar-default .navbar-toggle:focus {
+    color: #fff;
+    background: #890503;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+.navbar-default .navbar-toggle,
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+    border-color: #de291c;
+}
+
+
+form .row button {
+    display: block;
+    width: 100%;
+}
+
+
+#filter {
+    width: 96%;
+    margin: 0 auto;
+}
+
+
+#items {
+    margin-top: 5px;
+}
+
+.item {
+    width: 217px;
+    padding-bottom: 6px;
+    margin: 10px auto;
+    font-size: 14px;
+    border: 1px solid #e8e8e8;
+    border-radius: 4px;
+}
+.item:hover {
+    border-color: #de291c;
+}
+
+.item img {
+    display: block;
+    max-width: 215px;
+    height: 200px;
+    margin: 0 auto;
+    margin-bottom: -12px;
+}
+
+.item .price {
+    display: block;
+    margin: 4px 10px;
+    font-size: 1.4em;
+    color: #de291c;
+}
+.item .price span {
+    margin-right: 3px;
+}
+
+.item .title {
+    display: block;
+    margin: 4px 10px;
+    overflow: hidden;
+    font-size: 12px;
+    color: #3c3c3c;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
