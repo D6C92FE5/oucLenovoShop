@@ -14,7 +14,7 @@ using System.Data.Entity.Infrastructure;
 public partial class Entities : DbContext
 {
     public Entities()
-        : base("name=Entities")
+        : base("name=main")
     {
     }
 
