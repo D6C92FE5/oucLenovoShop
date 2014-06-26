@@ -25,9 +25,9 @@ public class BasePage : System.Web.UI.Page
             var cookie = Request.Cookies["User"];
             if (cookie != null)
             {
-                var userId = Util.TryToInt(cookie["ID"]);
+                var userID = Util.TryToInt(cookie["ID"]);
                 var password = cookie["Key"];
-                currentUser = database.Users.Where(u => u.ID == userId && u.Password == password)
+                currentUser = database.Users.Where(u => u.ID == userID && u.Password == password)
                     .SingleOrDefault();
                 Session["user"] = currentUser;
             }

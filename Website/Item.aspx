@@ -4,7 +4,7 @@
   <div class="detail">
     <div class="row">
       <div class="col-md-7">
-        <img src="Upload/140626-100224-3569f3f1.jpg" />
+        <img src="<%= ResolveUrl(item.DetailPicture) %>" />
       </div>
       <div class="col-md-5">
         <h2>Yoga2 13-ITH (日光橙) (H)</h2>
@@ -28,7 +28,7 @@
         </ul>
         <div class="operate">
           <asp:PlaceHolder ID="ctOperateUser" runat="server">
-            <a class="btn btn-success" href="/Order.aspx?ItemID=<%= item.ID %>">预定</a>
+            <a class="btn btn-success" href="/OrderNew.aspx?ItemID=<%= item.ID %>">预定</a>
           </asp:PlaceHolder>
           <asp:PlaceHolder ID="ctOperateAdmin" runat="server">
             <a class="btn btn-info" href="/ItemEdit.aspx?ID=<%= item.ID %>">修改</a>

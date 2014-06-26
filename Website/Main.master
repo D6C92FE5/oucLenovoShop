@@ -30,13 +30,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a href="/" class="navbar-brand">Lenovo</a>
+          <a class="navbar-brand">Lenovo</a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li><a href="/Index.aspx"><i class="fa fa-fw fa-home"></i>首页</a></li>
-            <li><a href="/Test.aspx"><i class="fa fa-fw fa-info"></i>关于</a></li>
-            <li><a href="/ItemEdit.aspx"><i class="fa fa-fw fa-info"></i>添加电脑</a></li>
+            <li><a href="/Order.aspx"><i class="fa fa-fw fa-file"></i>订单</a></li>
+            <li><a href="/ItemEdit.aspx"><i class="fa fa-fw fa-plus"></i>添加商品</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <asp:PlaceHolder ID="ctCurrentUser" runat="server">
