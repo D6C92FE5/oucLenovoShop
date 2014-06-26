@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.master" AutoEventWireup="true" CodeFile="Item.aspx.cs" Inherits="Item" %>
 
 <asp:Content ID="ctMain" ContentPlaceHolderID="ctMainContentPlaceHolder" Runat="Server">
-  <div class="detail">
+  <div class="detail bordered">
     <div class="row">
       <div class="col-md-7">
         <img src="<%= ResolveUrl(item.DetailPicture) %>" />
@@ -41,7 +41,7 @@
       </div>
     </div>
   </div>
-  <div class="detail intro">
+  <div class="detail bordered intro">
     <%= item.Intro %>
   </div>
 </asp:Content>

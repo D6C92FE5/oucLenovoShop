@@ -32,7 +32,7 @@
         <asp:Repeater ID="ctItems" runat="server">
           <ItemTemplate>
     <div class="pure-u-xl-1-5 pure-u-lg-1-4 pure-u-md-1-3 pure-u-sm-1-2">
-      <div class="item">
+      <div class="item bordered">
         <a class="title" href="/Item.aspx?ID=<%# Eval("ID") %>">
           <img src="<%# ResolveUrl(Eval("ListPicture").ToString()) %>">
         </a>

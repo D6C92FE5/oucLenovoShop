@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main.master" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="Login" %>
 
 <asp:Content ID="ctMain" ContentPlaceHolderID="ctMainContentPlaceHolder" Runat="Server">
-  <div class="auth">
+  <div class="auth bordered">
     <h1>
       请登录
       <span class="error"><asp:Literal ID="ctMessage" runat="server"></asp:Literal></span>
