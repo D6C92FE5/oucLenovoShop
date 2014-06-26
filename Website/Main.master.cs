@@ -10,9 +10,14 @@ public partial class Main : System.Web.UI.MasterPage
     protected void Page_Load(object sender, EventArgs e)
     {
         var currentUser = Session["user"] as User;
-        ctNavCustomer.Visible = currentUser != null && !currentUser.IsAdmin;
-        ctNavStaff.Visible = currentUser != null && currentUser.IsAdmin;
+        var isStaff = currentUser != null && currentUser.IsAdmin;
+        var isCustomer = currentUser != null && !currentUser.IsAdmin;
+
+        ctNavCustomer.Visible = isCustomer;
+        ctNavStaff.Visible = isStaff;
+        ctStaffNew.Visible = isStaff;
         ctCurrentUser.Visible = currentUser != null;
+        ctUserInfo.Visible = isCustomer;
         ctAuth.Visible = currentUser == null;
         if (currentUser != null)
         {

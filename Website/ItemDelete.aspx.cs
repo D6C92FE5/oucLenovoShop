@@ -11,16 +11,15 @@ public partial class ItemDelete : BasePage
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (isStaff)
-        {
-            var id = Util.TryToInt(Request["ID"]);
-            var item = database.Computers.Where(c => c.ID == id).SingleOrDefault();
-            if (item != null)
-            {
-                item.IsDeleted = true;
-            }
+        RequireStaff();
 
-            Response.Redirect("~/Index.aspx");
+        var id = Util.TryToInt(Request["ID"]);
+        var item = database.Computers.Where(c => c.ID == id).SingleOrDefault();
+        if (item != null)
+        {
+            item.IsDeleted = true;
         }
+
+        Response.Redirect("~/Index.aspx");
     }
 }

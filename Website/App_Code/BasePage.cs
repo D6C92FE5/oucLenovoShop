@@ -12,6 +12,12 @@ public class BasePage : System.Web.UI.Page
     protected bool isStaff;
     protected bool isCustomer;
 
+    protected void ShowMessage(string message)
+    {
+        Context.Items["Message"] = message;
+        Server.Transfer("~/Message.aspx");
+    }
+    
     protected void Login(User user)
     {
         Session["user"] = user;
@@ -25,6 +31,22 @@ public class BasePage : System.Web.UI.Page
         if (currentUser == null)
         {
             Response.Redirect("~/Login.aspx", true);
+        }
+    }
+    protected void RequireStaff()
+    {
+        RequireLogin();
+        if (!isStaff)
+        {
+            ShowMessage("您已经登录，但没有访问这里的权限");
+        }
+    }
+    protected void RequireCustomer()
+    {
+        RequireLogin();
+        if (!isCustomer)
+        {
+            ShowMessage("您已经登录，但没有访问这里的权限");
         }
     }
 

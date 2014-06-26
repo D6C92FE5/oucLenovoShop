@@ -11,7 +11,7 @@ public partial class ItemEdit : BasePage
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        RequireLogin();
+        RequireStaff();
         
         var id = Util.TryToInt(Request["ID"]);
         item = database.Computers.Where(c => c.ID == id).SingleOrDefault();

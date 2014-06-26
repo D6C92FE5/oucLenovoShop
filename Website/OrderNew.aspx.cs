@@ -9,7 +9,7 @@ public partial class OrderNew : BasePage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        RequireLogin();
+        RequireCustomer();
         
         if (currentUser == null)  // TODO: 管理员不能下订单
         {

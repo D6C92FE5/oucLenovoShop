@@ -7,7 +7,8 @@ current_href = location.pathname.split("/")[1] || 'Index.aspx';
 $('.navbar a[href^="/' + current_href + '"]').parent().addClass('active');
 
 $('.go-back').click(function() {
-  return history.back();
+  history.back();
+  return false;
 });
 
 $('.date').each(function() {

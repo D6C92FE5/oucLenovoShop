@@ -11,7 +11,7 @@ public partial class User_ : BasePage
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        RequireLogin();
+        RequireStaff();
         
         var id = Util.TryToInt(Request["ID"]);
         user = database.Users.Where(c => c.ID == id).SingleOrDefault();

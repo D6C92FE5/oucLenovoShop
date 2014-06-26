@@ -39,12 +39,14 @@
               <li><a href="/Order.aspx"><i class="fa fa-fw fa-file"></i>我的订单</a></li>
             </asp:PlaceHolder>
             <asp:PlaceHolder ID="ctNavStaff" runat="server">
-              <li><a href="/Order.aspx"><i class="fa fa-fw fa-file"></i>客户订单</a></li>
+              <li><a href="/Order.aspx"><i class="fa fa-fw fa-file"></i>顾客订单</a></li>
               <li><a href="/ItemNew.aspx"><i class="fa fa-fw fa-plus"></i>添加商品</a></li>
-              <li><a href="/StaffNew.aspx"><i class="fa fa-fw fa-plus"></i>添加工作人员</a></li>
             </asp:PlaceHolder>
           </ul>
           <ul class="nav navbar-nav navbar-right">
+            <asp:PlaceHolder ID="ctStaffNew" runat="server">
+              <li><a href="/StaffNew.aspx"><i class="fa fa-fw fa-plus"></i>添加工作人员</a></li>
+            </asp:PlaceHolder>
             <asp:PlaceHolder ID="ctCurrentUser" runat="server">
               <li class="dropdown">
                 <a href="#" data-toggle="dropdown" class="dropdown-toggle">
@@ -54,7 +56,11 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li><a href="/Logout.aspx"><i class="fa fa-fw fa-sign-out"></i>注销</a></li>
-                  <li class="hide"><a href="/change-password">修改密码</a></li>
+                  <li class="divider"></li>
+                  <li><a href="/Password.aspx"><i class="fa fa-fw fa-lock"></i>修改密码</a></li>
+                  <asp:PlaceHolder ID="ctUserInfo" runat="server">
+                    <li><a href="/UserInfo.aspx"><i class="fa fa-fw fa-info"></i>修改个人信息</a></li>
+                  </asp:PlaceHolder>
                 </ul>
               </li>
             </asp:PlaceHolder>

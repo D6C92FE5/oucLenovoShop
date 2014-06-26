@@ -7,7 +7,7 @@
         <tr>
           <th>编号</th>
           <th>商品</th>
-          <th class="<%= isStaff ? "" : "hide" %>">客户</th>
+          <th class="<%= isStaff ? "" : "hide" %>">顾客</th>
           <th class="hide">操作</th>
         </tr>
             <asp:Repeater ID="ctOrders" runat="server">

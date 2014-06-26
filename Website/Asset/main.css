@@ -202,6 +202,10 @@ form .row button {
     border-radius: 4px;
 }
 
+.edit-form [type="submit"] {
+    width: 100%;
+}
+
 
 .user {
     padding: 10px;
@@ -236,4 +240,16 @@ form .row button {
 }
 .note-toolbar.btn-toolbar {
     border-radius: 4px;
+}
+
+
+.message {
+    padding: 20px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.message p {
+    margin-top: 5px;
+    margin-bottom: 15px;
 }
