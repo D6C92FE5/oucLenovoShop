@@ -4,12 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using CryptSharp;
 
-public partial class Signup : Page
+public partial class ItemNew : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        Server.Transfer("~/UserEdit.aspx");
+        Server.Transfer("~/ItemEdit.aspx");
     }
 }

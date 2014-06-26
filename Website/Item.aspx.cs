@@ -15,9 +15,8 @@ public partial class Item : BasePage
         item = database.Computers.Where(c => c.ID == id).SingleOrDefault();
         item = item ?? new Computer();
 
-        var isAdmin = currentUser != null && currentUser.IsAdmin;
-        ctOperateUser.Visible = !item.IsDeleted && !isAdmin;
-        ctOperateAdmin.Visible = !item.IsDeleted && isAdmin;
+        ctOperateUser.Visible = !item.IsDeleted && !isStaff;
+        ctOperateAdmin.Visible = !item.IsDeleted && isStaff;
         ctDeleted.Visible = item.IsDeleted;
     }
 }

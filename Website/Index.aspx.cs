@@ -9,7 +9,7 @@ public partial class Index : BasePage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        var items = database.Computers.ToArray();
+        var items = database.Computers.Where(c => !c.IsDeleted).ToArray();
         
         var screenSizes = items.Select(i => i.ScreenSize).Distinct().OrderBy(s => s);
         ctScreenSizes.DataSource = screenSizes;

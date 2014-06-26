@@ -8,7 +8,7 @@
       </div>
       <div class="col-md-5">
         <h2>Yoga2 13-ITH (日光橙) (H)</h2>
-        <ul class="info clearfix">
+        <ul class="info">
           <li>
             <label>价格</label>
             <span class="info-item price"><span>¥</span><strong><%= item.Price %></strong></span>

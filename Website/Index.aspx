@@ -42,20 +42,4 @@
     </div>
           </ItemTemplate>
         </asp:Repeater>
-    <div class="pure-u-xl-1-5 pure-u-lg-1-4 pure-u-md-1-3 pure-u-sm-1-2">
-      <div class="item">&nbsp;</div>
-    </div>
-    <div class="pure-u-xl-1-5 pure-u-lg-1-4 pure-u-md-1-3 pure-u-sm-1-2">
-      <div class="item">&nbsp;</div>
-    </div>
-    <div class="pure-u-xl-1-5 pure-u-lg-1-4 pure-u-md-1-3 pure-u-sm-1-2">
-      <div class="item">&nbsp;</div>
-    </div>
-    <div class="pure-u-xl-1-5 pure-u-lg-1-4 pure-u-md-1-3 pure-u-sm-1-2">
-      <div class="item">&nbsp;</div>
-    </div>
-    <div class="pure-u-xl-1-5 pure-u-lg-1-4 pure-u-md-1-3 pure-u-sm-1-2">
-      <div class="item">&nbsp;</div>
-    </div>
-  </div>
 </asp:Content>

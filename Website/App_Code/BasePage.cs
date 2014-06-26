@@ -8,6 +8,9 @@ public class BasePage : System.Web.UI.Page
     protected Entities database = new Entities();
 
     protected User currentUser;
+    protected int currentUserID;
+    protected bool isStaff;
+    protected bool isCustomer;
 
     protected void Login(User user)
     {
@@ -17,8 +20,17 @@ public class BasePage : System.Web.UI.Page
         cookie["Key"] = user.Password;
     }
 
+    protected void RequireLogin()
+    {
+        if (currentUser == null)
+        {
+            Response.Redirect("~/Login.aspx", true);
+        }
+    }
+
     protected void Page_Init(object sender, EventArgs e)
     {
+        // 从 Session 和 Cookie 登录
         currentUser = Session["user"] as User;
         if (currentUser == null)
         {
@@ -32,6 +44,11 @@ public class BasePage : System.Web.UI.Page
                 Session["user"] = currentUser;
             }
         }
+
+        // 当前用户状态
+        currentUserID = currentUser != null ? currentUser.ID : -1;
+        isStaff = currentUser != null && currentUser.IsAdmin;
+        isCustomer = currentUser != null && !currentUser.IsAdmin;
     }
 
     protected void Page_Unload(object sender, EventArgs e)

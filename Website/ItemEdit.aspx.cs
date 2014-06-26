@@ -11,6 +11,8 @@ public partial class ItemEdit : BasePage
 
     protected void Page_Load(object sender, EventArgs e)
     {
+        RequireLogin();
+        
         var id = Util.TryToInt(Request["ID"]);
         item = database.Computers.Where(c => c.ID == id).SingleOrDefault();
         item = item ?? new Computer();
@@ -35,6 +37,7 @@ public partial class ItemEdit : BasePage
             item.Model = Request["modal"];
             item.ScreenSize = Request["screen-size"];
             item.Processor = Request["processor"];
+            item.Intro = "";
 
             if (item.ID == 0)
             {

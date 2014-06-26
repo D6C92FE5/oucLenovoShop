@@ -2,7 +2,7 @@ var current_href;
 
 moment.lang('zh-CN');
 
-current_href = location.pathname.split("/")[1] || 'index';
+current_href = location.pathname.split("/")[1] || 'Index.aspx';
 
 $('.navbar a[href^="/' + current_href + '"]').parent().addClass('active');
 

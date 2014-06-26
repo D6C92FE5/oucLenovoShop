@@ -9,6 +9,8 @@ public partial class OrderNew : BasePage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        RequireLogin();
+        
         if (currentUser == null)  // TODO: 管理员不能下订单
         {
             Response.Redirect("~/Login.aspx");

@@ -5,14 +5,16 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class Order_ : BasePage
+public partial class User_ : BasePage
 {
+    protected User user;
+
     protected void Page_Load(object sender, EventArgs e)
     {
         RequireLogin();
-
-        ctOrders.DataSource = (isStaff ? database.Orders : database.Orders
-            .Where(o => o.User.ID == currentUser.ID)).ToArray();
-        ctOrders.DataBind();
+        
+        var id = Util.TryToInt(Request["ID"]);
+        user = database.Users.Where(c => c.ID == id).SingleOrDefault();
+        user = user ?? new User();
     }
 }

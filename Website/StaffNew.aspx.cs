@@ -4,9 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using CryptSharp;
 
-public partial class Signup : Page
+public partial class StaffNew : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {

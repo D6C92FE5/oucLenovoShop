@@ -3,6 +3,12 @@
     display: none;
 }
 
+.bordered {
+    border: 1px solid #e8e8e8;
+    border-radius: 4px;
+}
+
+
 body,h1,h2,h3,h5,h6,.h1,.h2,.h3,.h5,.h6 {
     font-family: "Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Microsoft YaHei",sans-serif;
 }
@@ -144,7 +150,7 @@ form .row button {
 }
 
 .detail .operate {
-    margin-bottom: 10px;
+    margin-bottom: 1px;
 }
 
 .detail .operate a {
@@ -154,32 +160,64 @@ form .row button {
 
 
 .auth {
-  max-width: 330px;
-  padding: 10px 20px 20px;
-  margin: 40px auto;
-  background-color: #fff;
-  border: 1px solid #e5e5e5;
-  border-radius: 5px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    max-width: 330px;
+    padding: 10px 20px 20px;
+    margin: 40px auto;
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 }
 
 .auth .error {
-  padding-left: 10px;
-  font-size: .5em;
-  vertical-align: middle;
-  color: #a94442;
+    padding-left: 10px;
+    font-size: .5em;
+    vertical-align: middle;
+    color: #a94442;
 }
 
 .auth .form-control {
-  position: relative;
-  font-size: 16px;
-  height: auto;
-  padding: 10px;
-  box-sizing: border-box;
-  margin-bottom: 10px;
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
 }
 
 .auth .alter {
-  float: right;
-  margin: 23px 5px 0 0;
+    float: right;
+    margin: 23px 5px 0 0;
+}
+
+
+.edit-form {
+    padding: 20px;
+    margin-top: 10px;
+    border: 1px solid #e8e8e8;
+    border-radius: 4px;
+}
+
+
+.user {
+    padding: 10px;
+    padding-left: 40px;
+    margin-top: 10px;
+    list-style: none;
+}
+
+.user li {
+    height: 35px;
+    line-height: 35px;
+}
+
+.user label {
+    display: inline-block;
+    width: 150px;
+    font-weight: normal;
+    color: #6c6c6c;
+}
+
+.user span {
+    font-weight: bold;
 }
