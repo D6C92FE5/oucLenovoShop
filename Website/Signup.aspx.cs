@@ -29,7 +29,7 @@ public partial class Signup : BasePage
         user.Phone = "";
         user.Address = "";
         user.ZipCode = "";
-        user.IsAdmin = true;
+        user.IsAdmin = false;
 
         database.Users.Add(user);
 

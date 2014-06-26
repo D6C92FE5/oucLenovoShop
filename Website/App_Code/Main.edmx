@@ -10,13 +10,15 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="200" Nullable="false" />
           <Property Name="Model" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Price" Type="nvarchar" MaxLength="10" Nullable="false" />
           <Property Name="ScreenSize" Type="nvarchar" MaxLength="10" Nullable="false" />
           <Property Name="Processor" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="ListPicture" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="DetailPicture" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Intro" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="Order">
           <Key>
@@ -86,7 +88,7 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Model" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Price" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="ScreenSize" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
@@ -94,6 +96,8 @@
           <NavigationProperty Name="Orders" Relationship="Self.FK_Order_Computer" FromRole="Computer" ToRole="Order" />
           <Property Name="ListPicture" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="DetailPicture" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Intro" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
         </EntityType>
         <EntityType Name="Order">
           <Key>
@@ -166,6 +170,8 @@
           <EntitySetMapping Name="Computers">
             <EntityTypeMapping TypeName="MainModel.Computer">
               <MappingFragment StoreEntitySet="Computer">
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="Intro" ColumnName="Intro" />
                 <ScalarProperty Name="DetailPicture" ColumnName="DetailPicture" />
                 <ScalarProperty Name="ListPicture" ColumnName="ListPicture" />
                 <ScalarProperty Name="ID" ColumnName="ID" />

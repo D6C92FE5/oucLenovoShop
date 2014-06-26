@@ -25,6 +25,8 @@ public partial class Computer
     public string Processor { get; set; }
     public string ListPicture { get; set; }
     public string DetailPicture { get; set; }
+    public string Intro { get; set; }
+    public bool IsDeleted { get; set; }
 
     public virtual ICollection<Order> Orders { get; set; }
 }
