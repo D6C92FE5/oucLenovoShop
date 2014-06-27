@@ -35,7 +35,7 @@ public partial class Signup : BasePage
             user.Phone = Request["phone"];
             user.Address = Request["address"];
             user.ZipCode = Request["zip-code"];
-            user.IsAdmin = true;
+            user.IsAdmin = false;
 
             database.Users.Add(user);
 
